@@ -21,19 +21,19 @@ spec:
   #     secret:
   #       name: customer1-db-credentials
 
-  # externalClusters:
-  #   - name: source
-  #     plugin:
-  #       name: barman-cloud.cloudnative-pg.io
-  #       parameters:
-  #         barmanObjectName: customer1-objectstore
-  #         serverName: customer1-db
+  externalClusters:
+    - name: source
+      plugin:
+        name: barman-cloud.cloudnative-pg.io
+        parameters:
+          barmanObjectName: customer1-objectstore
+          serverName: customer1-db
 
   storage:
     size: 1Gi
 
-  # plugins:
-  #   - name: barman-cloud.cloudnative-pg.io
-  #     isWALArchiver: true
-  #     parameters:
-  #       barmanObjectName: customer1-objectstore
+  plugins:
+    - name: barman-cloud.cloudnative-pg.io
+      isWALArchiver: true
+      parameters:
+        barmanObjectName: customer1-objectstore
