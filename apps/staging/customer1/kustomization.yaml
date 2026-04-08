@@ -9,7 +9,7 @@ patches:
     patch: |-
       - op: replace
         path: /spec/parameters/userAssignedIdentityID
-        value: "98fb7eb2-0aba-4d0e-a436-1eee580a0ccb"
+        value: "10ebab78-f6c8-4d5e-ac64-c0d85fb031d0"
       - op: replace
         path: /spec/parameters/tenantId
         value: "488cd0ad-9f25-4676-a378-b80a1063b0ab"
@@ -20,3 +20,13 @@ patches:
       - op: replace
         path: /spec/configuration/destinationPath
         value: "https://mercurybackupsstgcv1n.blob.core.windows.net/customer1"
+  - target:
+      kind: Ingress
+      name: customer1-ingress
+    patch: |-
+      - op: replace
+        path: /spec/tls/0/hosts/0
+        value: "customer1.orion-prod.kubecraftlabs.com"
+      - op: replace
+        path: /spec/rules/0/host
+        value: "customer1.orion-prod.kubecraftlabs.com"
