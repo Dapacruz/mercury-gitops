@@ -10,6 +10,12 @@ spec:
   dependsOn:
     - name: cert-manager
     - name: cnpg
+  install:
+    remediation:
+      retries: 5
+  upgrade:
+    remediation:
+      retries: 5
   chart:
     spec:
       chart: plugin-barman-cloud
