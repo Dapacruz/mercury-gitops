@@ -12,7 +12,7 @@ data:
       - orgId: 1
         name: Telegram Bot
         receivers:
-          - uid: mercury-telegram
+          - uid: orion-telegram
             type: telegram
             settings:
               bottoken: $TELEGRAM_BOT_TOKEN
