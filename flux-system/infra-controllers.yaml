@@ -27,4 +27,8 @@ spec:
       kind: HelmRelease
       name: traefik
       namespace: flux-system
+    - apiVersion: apps/v1
+      kind: Deployment
+      name: cert-manager-cert-manager-webhook
+      namespace: cert-manager
 
