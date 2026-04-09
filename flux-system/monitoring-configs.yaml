@@ -1,0 +1,15 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: monitoring-configs
+  namespace: flux-system
+spec:
+  interval: 5m
+  path: ./monitoring/configs/staging
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: orion-staging
+  dependsOn:
+    - name: monitoring-controllers
+

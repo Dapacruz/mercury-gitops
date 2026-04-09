@@ -1,0 +1,16 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: cnpg-plugin
+  namespace: flux-system
+spec:
+  interval: 5m
+  path: ./infrastructure/cnpg-plugin/staging
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: orion-staging
+  dependsOn:
+    - name: infra-controllers
+    - name: infra-configs
+
