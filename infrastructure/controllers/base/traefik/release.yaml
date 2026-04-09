@@ -21,3 +21,7 @@ spec:
     # Override the default IngressClass name from "traefik-traefik" to "traefik"
     ingressClass:
       name: traefik
+    service:
+      spec:
+        loadBalancerIP: "${TRAEFIK_IP}"
+
