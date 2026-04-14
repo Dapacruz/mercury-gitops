@@ -8,10 +8,10 @@ spec:
   ingressClassName: traefik
   tls:
     - hosts:
-        - customer1.orion.dcinfrastructures.io
+        - customer1.orion-staging.dcinfrastructures.io
       secretName: customer1-tls
   rules:
-    - host: customer1.orion.dcinfrastructures.io
+    - host: customer1.orion-staging.dcinfrastructures.io
       http:
         paths:
           - path: /
